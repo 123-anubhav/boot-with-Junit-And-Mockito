@@ -15,9 +15,7 @@ public class RestController {
 
 	@GetMapping("/greet")
 	public ResponseEntity greetMessage() {
-		
 		String response = msgService.getMessage();
-		
 		return new ResponseEntity(response, HttpStatus.OK);
 	}
 }

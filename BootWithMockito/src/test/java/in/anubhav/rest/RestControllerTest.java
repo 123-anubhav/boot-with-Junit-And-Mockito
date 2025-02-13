@@ -3,6 +3,7 @@ package in.anubhav.rest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.mock.web.MockHttpServletResponse;
@@ -21,6 +22,7 @@ public class RestControllerTest {
 
 	private MockMvc mockMvc;
 
+	@Test
 	public void greetMessageTest() throws Exception {
 		when(msgService.getMessage()).thenReturn("good morning anubhav");
 		MockHttpServletRequestBuilder mvcBuilder = MockMvcRequestBuilders.get("/greet"); 
